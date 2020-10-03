@@ -1,15 +1,16 @@
 package helpers
 
 import (
+	"fmt"
 	"time"
 
+	avalancheNetwork "github.com/ava-labs/avalanche-testing/avalanche/networks"
+	"github.com/ava-labs/avalanche-testing/avalanche_client/apis"
+	"github.com/ava-labs/avalanche-testing/avalanche_client/utils/constants"
 	"github.com/ava-labs/avalanchego/api"
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/snow/choices"
 	"github.com/ava-labs/avalanchego/vms/platformvm"
-	avalancheNetwork "github.com/ava-labs/avalanche-testing/avalanche/networks"
-	"github.com/ava-labs/avalanche-testing/avalanche_client/apis"
-	"github.com/ava-labs/avalanche-testing/avalanche_client/utils/constants"
 	"github.com/palantir/stacktrace"
 	"github.com/sirupsen/logrus"
 )
@@ -179,6 +180,8 @@ func (runner RPCWorkFlowRunner) FundXChainAddresses(addresses []string, amount u
 		if err := runner.waitForXchainTransactionAcceptance(txID); err != nil {
 			return err
 		}
+		fmt.Println("all balances ")
+		fmt.Println(client.GetAllBalances(address))
 	}
 
 	return nil

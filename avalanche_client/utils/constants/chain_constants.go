@@ -15,9 +15,10 @@ var (
 	AvaxAssetID ids.ID
 )
 
+
 func init() {
-	XChainID, _ = ids.FromString("v4hFSZTNNVdyomeMoXa77dAz4CdxU3cziSb45TB7mfXUmy7C7")
+	XChainID, _ = ids.FromString("iWNpYgu4cCoxvSVywQy2egFCmgq9d9Tp1LeFURTVrHVZbmURK")
 	PlatformChainID = ids.Empty
-	CChainID, _ = ids.FromString("2m6aMgMBJWsmT4Hv448n6sNAwGMFfugBvdU6PdY5oxZge4qb1W")
-	AvaxAssetID, _ = ids.FromString("SSUAMrVdqYuvybAMGNitTYSAnE4T5fVdVDB82ped1qQ9f8DDM")
+	CChainID, _ = ids.FromString("8XUYBzd61vw86MC2UmizjRdYFxcEKgQabZqx8hoSjzQiqoewQ")
+	AvaxAssetID, _ = ids.FromString("o4TncKL4JSBuW1HJK19aE8UBdSXcNzFzF4RtPjqtawb5DPSrH")
 }
